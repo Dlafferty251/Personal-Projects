@@ -13,11 +13,29 @@ function countWords(text) {
 
     }
 
-    const words = text.trim().split(/\s+/); // This will take the text and it will trim (remove any whitespace or new line) and then split the text into an array of words
+    const words = text.trim().split(/\s+/g); // This will take the text and it will trim (remove any whitespace or new line) and then split the text into an array of words
     console.log(`Words Array:`, words);
     return words.length;
 
 }
+
+function openForm() {
+    var form = document.getElementById("signupPage");
+    if (form.style.display === "none") {
+        form.style.display = "block";
+    } else {
+        form.style.display = "none";
+    }
+}
+
+function home() {
+    console.log("You are already on home");
+}
+
+function about() {
+    console.log("There is no about page yet");
+}
+
 
 document.addEventListener('DOMContentLoaded', function() {
 
