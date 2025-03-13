@@ -2,12 +2,13 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #1b1b32;
     color: #ffffff;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .divider {
     border-bottom: 3px solid #fa8072;
     display: block;
-    width: 80%;
     margin: 30px auto;
 }
 
@@ -38,17 +39,16 @@ header h1,  p{
 #countButton {
     width: 25vw;
     height: 5vh;
-    justify-content: left;
-    display: inline;
     background-color: #fa8072;
     color: #ffffff;
     font-size: 1.5em;
     border:#1b1b32;
     border-radius: 10px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-
+    text-align: center;
+    display: flex;
+    margin: 20px auto;
+    justify-content: center;
+    
 
 ;}
 
@@ -60,12 +60,10 @@ header h1,  p{
     height: 5vh;
     font-size: 1.5em;
     background-color: #fa8072;
-    display: inline;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    justify-content: right;
-}
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    }
 
 #countButton:hover {
     background-color: #ff6347;
