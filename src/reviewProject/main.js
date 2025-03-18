@@ -18,3 +18,8 @@ const reviewers = [
 
 }
 ];
+
+//Grabs the items from the html file and declares them ass a constant
+const img = document.getElementById('person-img');
+const author = document.getElementById('author')
+const 
