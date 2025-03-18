@@ -103,8 +103,8 @@ p {
 }
 
 #signupPage {
-    display: none;
-    position: fixed;
-    width: 280px;
+    width: 300px;
+    font-size: calc(1vw +1vh);
     background-color: #6528e0;
 }
+

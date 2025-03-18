@@ -2,6 +2,15 @@
 WELCOME TO WORD COUNT FUNCTION
 This program is used to count the number of words in a text.
 
+This program also has multiple functions
+One function is to count the number of words in a text by grabbing a users 
+input from the text area in html and then will seperate the string by the whitespaces nd will arrange them in an array
+this will then display the contents of the array.
+
+The Second function is to open a form when the login button is clicked by changing the display of the signup page
+to block and then will change the position of the form to absolute and will place it under the sign up button.
+
+Other functions are not ready to be declared.
 */
 
 
@@ -21,8 +30,18 @@ function countWords(text) {
 
 function openForm() {
     var form = document.getElementById("signupPage");
+    var button = document.querySelector(".login-Button");
     if (form.style.display === "none") {
+        //This Line of code is calling for the signup buttons exact location
+        //and making it a variable decarled as rect
+        var rect = button.getBoundingClientRect();
+
         form.style.display = "block";
+        form.style.position = "absolute"; //This will tell the form to be placed at a speciific position closest to its ancestor
+        form.style.top = rect.bottom + "px";
+        form.style.left = (rect.left - 100) + "px";
+        form.style.display ="block";
+
     } else {
         form.style.display = "none";
     }
