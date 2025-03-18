@@ -1,0 +1,18 @@
+.random-btn {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    outline: 0;
+    cursor: pointer;
+    font-family: sans-serif;
+
+}
+
+.random-btn .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+}
