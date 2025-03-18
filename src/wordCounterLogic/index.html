@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter</title>
+    <link rel="stylesheet" href="stylesheets.css">
+    <!-- Link to the JavaScript file -->
+    <script defer src="wordCount.js"></script>
+</head>
+<body>
+    <header>
+    
+    <!-- Here is the navagation bar at the top of my form -->
+     <div class="taskbar">
+        <nav>
+            <ul>
+                <button class="button" onclick="home()">Home N/A</button>
+                <button class="button" onclick="about()">About N/A</button>
+                <button class= "button login-Button" onclick="openForm()">Sign Up</button>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Here is the form that will pop up when the user clicks the sign up button -->
+
+    <form id="signupPage" action="/action_page.php" class="form-container">
+        <h3>Please Create an Account:</h3>
+        <div class = "divider"></div>
+        <label for ="email">Email</label>
+        <input type = "email" placeholder = "Enter Email:" required>
+
+        <label for ="psw">Password</label>
+        <input type = "password" placeholder = "Enter Password:" required>
+
+        <button type = "submit" class = "btn">Submit</button>
+        <button type ="button" onclick="openForm()">Cancel</button>
+
+
+    </form>
+
+
+    <h1>Dylan's Word Counter</h1>
+    <div class="divider"></div>
+    </header>
+    <!-- Text area for user input -->
+     <div class="container">
+        <p>Go ahead and enter the text you would like me to count in the text area</p>
+        <textarea id="text" rows="15" cols="50" placeholder="Hello! Enter your text here" value = "text"></textarea>
+
+
+    </div>
+    <div class="divider"></div>
+    <!-- Button to sumbit the words -->
+    <button id="countButton">Count Words</button>
+    <!-- Display the word count -->
+    <p id="wordCount">Word Count: 0</p>
+</body>
+</html>
