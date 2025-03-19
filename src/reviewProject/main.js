@@ -1,24 +1,31 @@
 const reviewers = [
     {
-        id: 0,
+        id: 1,
         name: "Brad Pitt",
         job: "Actor",
         icon: "images/BradPitt.jpg",
         text: "Brad Pitt, born William Bradley Pitt on December 18, 1963, is an American actor known for his versatile roles, including those in Thelma & Louise, A River Runs Through It, and Fight Club",
     }, 
     {
-        id: 1,
+        id: 2,
         name: "Patrick Star",
         job: "Stay At Home Starfish",
         icon: "images/patrickStar.jpg",
         text: "Patrick starfish is a starfish that lives under a rock. He is SpongeBob's best friend.",
     },
     {
-        id: 2,
+        id: 3,
         name: "Dylan Lafferty",
         job: "Line Cook",
         icon: "images/profileIcon.png",
         text: "Dylan is a line cook at Mcglynns bar and pub. He has cooked there for 5 years and has perfected his Jambalaya. He works a lot of hours and has spent a long time trying to master his knife skills.",
+    },{
+
+        id: 4,
+        name: "Finny",
+        job: "Being a good boy",
+        icon: "images/finny.jpg",
+        text: "Finn is a Bernese mountain dog. He is 3 years old and he loves to play, go on walks, and especially eating. He will do anything for a treat!"
     }
 ];
 
