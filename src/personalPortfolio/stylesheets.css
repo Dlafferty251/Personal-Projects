@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+   
+}
+
+.backG {
+    background-color: #ede8f5;
+}
