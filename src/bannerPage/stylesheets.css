@@ -1,0 +1,37 @@
+body {
+    background: url('images/graphicAbstract.jpg');
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 25%;
+    width: 792px;
+    height: 198px;
+    background-color: #382d4324;
+}
+
+.bannerWord {
+    font-family: fantasy, monospace;
+    font-size: 24px;
+    color: #382d43;
+}
+
+.console {
+    color: rgb(255, 54, 54);
+}
+
+.log {
+    color: rgb(66, 66, 251);
+}
+
+.parenth {
+    color: green;
+}
+
+.quote {
+    color: greenyellow;
+}
