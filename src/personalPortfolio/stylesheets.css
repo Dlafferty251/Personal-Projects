@@ -49,26 +49,22 @@ body, html {
 /* Navbar Section (Right Side) */
 .navbar {
     position: fixed;
-    right: -300px; /* Initially hidden */
+    right: -200px; /* Initially hidden */
     top: 0;
     height: 100vh;
-    width: 300px;
-    background-color: #333;
+    width: 200px;
+    background-color: #33333390;
     display: flex;
     align-items: center;
+    margin-right: 0;
     justify-content: center;
     transition: right 0.3s ease; /* Smooth slide animation */
+    z-index: 10;
 }
 
-.navbar:hover,
-body:hover .navbar:hover {
+.navbar.open {
     right: 0;
 }
-
-body:hover .navbar {
-    right: -300px; /* Prevent early activation */
-}
-
 /* Navbar List */
 .navbar ul {
     list-style: none;
@@ -85,7 +81,7 @@ body:hover .navbar {
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .list-nav a:hover {
@@ -154,6 +150,29 @@ body:hover .navbar {
     justify-content: center;
     gap: 15px;
 }
+
+/* Styling for the Toggle Button */
+#navbar-toggle {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #00bcd4; /* Accent color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#navbar-toggle:hover {
+    background-color: #0097a7; /* Darker shade of the accent color */
+    transform: scale(1.1);
+}
+
+#navbar-toggle:focus {
+    outline: none; /* Remove default focus outline */
+}
+
 
 @keyframes fadeIn {
     to {
