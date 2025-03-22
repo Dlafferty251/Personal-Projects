@@ -1,10 +1,201 @@
-body {
+/* Reset and Global Styles */
+* {
     margin: 0;
-    height: 100vh;
-    overflow: hidden;
-   
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.backG {
-    background-color: #ede8f5;
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrollbars */
+    background-color: #14293b;
+    color:white;
 }
+
+/* Background Container */
+.backG {
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+
+/* Headshot Section (Left Side) */
+.headshotContainer {
+    flex: 1; /* Takes half the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('images/graphicAbstract.jpg') no-repeat center center;
+    background-size: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Headshot Image */
+.headshot {
+    width: 60%;
+    max-width: 400px;
+    border-radius: 50%; /* Circular Image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.headshot:hover {
+    transform: scale(1.25);
+    transition: transform 0.5s ease-in;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Navbar Section (Right Side) */
+.navbar {
+    position: fixed;
+    right: -300px; /* Initially hidden */
+    top: 0;
+    height: 100vh;
+    width: 300px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease; /* Smooth slide animation */
+}
+
+.navbar:hover,
+body:hover .navbar:hover {
+    right: 0;
+}
+
+body:hover .navbar {
+    right: -300px; /* Prevent early activation */
+}
+
+/* Navbar List */
+.navbar ul {
+    list-style: none;
+    text-align: left;
+}
+
+/* Navbar Links */
+.list-nav {
+    margin: 20px 0;
+    
+}
+
+.list-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.list-nav a:hover {
+    transform: scale(1.1);
+    color: #00bcd4; /* Accent color */
+    text-decoration: underline;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.name {
+    margin: 10px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.divider {
+    width: 80%;
+    height: 3px;
+    background: #00bcd4;
+    margin: 15px 0;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.titles {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: wavy;
+    text-decoration-color: #00bcd4;
+    font-size: 1.3rem;
+    color: #00bcd4;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInScale 1.2s ease-out forwards;
+}
+
+.logo {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto 20px; /* Centers the logo and adds space below */
+    animation: fadeInDown 1s ease; /* Smooth animation */
+
+}
+
+.name {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titles-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    } to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+ /*Responsive Design */
+@media (max-width: 768px) {
+    .headshot {
+        width: 80%;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .titles {
+        font-size: 1rem;
+    }
+}
+
