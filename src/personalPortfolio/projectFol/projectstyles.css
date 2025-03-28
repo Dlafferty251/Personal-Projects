@@ -1,0 +1,163 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #14293b;
+    color: white;
+}
+
+/* Background Container */
+.backG {
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    right: -200px;
+    top: 0;
+    height: 100vh;
+    width: 200px;
+    background-color: #33333390;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease;
+    z-index: 10;
+}
+
+.navbar.open {
+    right: 0; /* Slide-in when open */
+}
+
+.navbar ul {
+    list-style: none;
+    text-align: left;
+}
+
+.list-nav {
+    margin: 20px 0;
+}
+
+.list-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.list-nav a:hover {
+    transform: scale(1.1);
+    color: #00bcd4;
+    text-decoration: underline;
+}
+
+/* Main Content Container */
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Heading and Divider */
+.name {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.divider {
+    width: 80%;
+    height: 3px;
+    background: #00bcd4;
+    margin: 15px 0;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* Project Card Container */
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+/* Individual Project Cards */
+.project-card {
+    max-width: 300px;
+    text-align: center;
+    margin: 20px;
+    transition: transform 0.3s ease;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.caption {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #00bcd4;
+}
+
+/* Navbar Toggle Button */
+#navbar-toggle {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#navbar-toggle:hover {
+    background-color: #0097a7;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .project-card {
+        max-width: 80%;
+    }
+}
