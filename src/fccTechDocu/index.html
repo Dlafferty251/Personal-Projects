@@ -4,50 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technical Documentation - Java</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
     <main id = "main-doc">
 
-    
     <nav>
         <li><a href="#introduction"> Introduction</a></li>
         <li><a href="#wysk">What you should know</a></li>
-        <li><a href = "#javascript_and_java">Java vs JavaScript</a></li>
-        <li><a href = "#hello-world">Hello World</a></li>
+        <li><a href = "#variables">Java vs JavaScript</a></li>
+        <li><a href = "#control-flow">Hello World</a></li>
         <li><a href = "#for-loops">For-Loops</a></li>
     </nav>
 
 
     <section id="main-section">
-        <h1 id = "wysk">Introduction</h1>
+        <h1 id = "introduction">Introduction</h1>
         <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam doloribus ex minus iste eos recusandae, nobis voluptates nemo quae quidem alias harum provident consequatur enim animi perspiciatis dolor veniam architecto.</p>
-        <p>Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
-        <ul>
-            <li>Praesentium itaque amet, quo natus fuga nesciunt cupiditate doloribus dolore ipsum rerum voluptas minus aut fugit tempora quas architecto, dolor, et repellendus.</li>
-            <li>Praesentium itaque amet, quo natus fuga nesciunt cupiditate doloribus dolore ipsum rerum voluptas minus aut fugit tempora quas architecto, dolor, et repellendus.</li>
-        </ul>
+            <p>Java is a high-level, object-oriented programming language that is widely used for building cross-platform applications. It is known for its "Write Once, Run Anywhere" principle meaning. Compiled Java code run on any platform tht supports Java without the need for a recompile.</p>
+        
+            <ul>
+                <li></li>
+            </ul>
         </div>
+
     </section>
 
     <section id="main-section">
-        <h2 id="wysk">What you shou</h1>
+        <h2 id="wysk">Basic Syntax for Java</h1>
         <div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur officiis, perspiciatis incidunt repudiandae a minima! Sunt, similique exercitationem sint eligendi deleniti odit doloremque dolorem nobis blanditiis commodi fugit ullam nam?</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque totam sunt excepturi, consectetur, quia dignissimos dolores voluptate dolorem nulla tenetur quasi ea, debitis adipisci iure iusto illo ex! Debitis, nam.</p>
+            <p>Java Programs are written inside of classes that contain methods. A Simple print statement in Java looks like this:</p>
+
+            <pre><code>
+                public class Main {
+                    public static void main(String[] args) {
+                        System.out.println("Hello, World!");
+                    }
+                }
+            </code></pre>
+
+            <h3>Explanation:</h3>
+            <p>public class Main defines a a class named Main</p>
         </div>
     </section>
 
     <section id = "main-section">
-        <h2 id ="javascript_and_java">JavaScript and Java</h2>
+        <h2 id ="variables">Data types and Variables</h2>
         <div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur officiis, perspiciatis incidunt repudiandae a minima! Sunt, similique exercitationem sint eligendi deleniti odit doloremque dolorem nobis blanditiis commodi fugit ullam nam?</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque totam sunt excepturi, consectetur, quia dignissimos dolores voluptate dolorem nulla tenetur quasi ea, debitis adipisci iure iusto illo ex! Debitis, nam.</p>
+            <p>Java is statically typed, meaning variables must be declared with a specific type.</p>  
+            <pre><code>
+                int year = 2025;
+                double pi = 3.14159265359;
+                float pi = 3.14;
+                String text = "Java Is Cool";
+                boolean isJavaFun = true;
+                char grade = 'A';
+            </code></pre> 
+
+            <p>We also have Shorts, and Longs as well!</p>
         </div>
     </section>
 
     <section id="main-section">
-        <h2 id ="hello-world">Hello World</h2>
+        <h2 id ="control-flow">Control Flow</h2>
         <div>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur officiis, perspiciatis incidunt repudiandae a minima! Sunt, similique exercitationem sint eligendi deleniti odit doloremque dolorem nobis blanditiis commodi fugit ullam nam?</p>
         <p>Lorem ipsum dolor  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque harum dolorem expedita vero veniam commodi omnis quae cupiditate quas odit repellat, exercitationem ducimus, corporis, magni quia laborum adipisci id reiciendis.it, amet consectetur adipisicing elit. Neque totam sunt excepturi, consectetur, quia dignissimos dolores voluptate dolorem nulla tenetur quasi ea, debitis adipisci iure iusto illo ex! Debitis, nam.</p>
