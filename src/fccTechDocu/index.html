@@ -7,81 +7,108 @@
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <main id = "main-doc">
-
-    <nav>
-        <li><a href="#introduction"> Introduction</a></li>
-        <li><a href="#wysk">What you should know</a></li>
-        <li><a href = "#variables">Java vs JavaScript</a></li>
-        <li><a href = "#control-flow">Hello World</a></li>
-        <li><a href = "#for-loops">For-Loops</a></li>
+    <nav id="navbar">
+        <header>Java Documentation</header>
+        <ul>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#What_you_should_know">What you should know</a></li>
+            <li><a class="nav-link" href="#Data_Types_and_Variables">Data Types and Variables</a></li>
+            <li><a class="nav-link" href="#Control_Flow">Control Flow</a></li>
+            <li><a class="nav-link" href="#Methods_and_Functions">Methods and Functions</a></li>
+            <li><a class="nav-link" href="#References">References</a></li>
+        </ul>
     </nav>
 
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <h1>Introduction</h1>
+            <p>Java is a high-level, object-oriented programming language widely used for cross-platform applications.</p>
+        </section>
 
-    <section id="main-section">
-        <h1 id = "introduction">Introduction</h1>
-        <div>
-            <p>Java is a high-level, object-oriented programming language that is widely used for building cross-platform applications. It is known for its "Write Once, Run Anywhere" principle meaning. Compiled Java code run on any platform tht supports Java without the need for a recompile.</p>
-        
-            <ul>
-                <li></li>
-            </ul>
-        </div>
-
-    </section>
-
-    <section id="main-section">
-        <h2 id="wysk">Basic Syntax for Java</h1>
-        <div>
-            <p>Java Programs are written inside of classes that contain methods. A Simple print statement in Java looks like this:</p>
-
+        <section class="main-section" id="What_you_should_know">
+            <h1>What you should know</h1>
+            <p>Java programs are written inside of classes that contain methods. A simple print statement in Java looks like this:</p>
             <pre><code>
-                public class Main {
-                    public static void main(String[] args) {
-                        System.out.println("Hello, World!");
-                    }
-                }
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+            </code></pre>
+            <h2>Key Points:</h2>
+            <ul>
+                <li>Java is statically typed.</li>
+                <li>All Java programs must be inside a class.</li>
+                <li>The `main` method is the entry point of a Java program.</li>
+                <li>Java is case-sensitive.</li>
+                <li>Statements end with a semicolon (`;`).</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Data_Types_and_Variables">
+            <h1>Data Types and Variables</h1>
+            <p>Java variables must be declared with a specific type.</p>
+            <pre><code>
+int year = 2025;
+double pi = 3.14159265359;
+float shortPi = 3.14f;
+String text = "Java Is Cool";
+boolean isJavaFun = true;
+char grade = 'A';
+            </code></pre>
+            <p>We also have Shorts, and Longs as well!</p>
+        </section>
+
+        <section class="main-section" id="Control_Flow">
+            <h1>Control Flow</h1>
+            <p>Control flow determines the order in which statements execute.</p>
+
+            <h2>Conditional Statements (if-else)</h2>
+            <p>Condition statements allow a program to execute different code blocks based on a condition.</p>
+            <pre><code>
+int num = 10;
+if(num > 0) {
+    System.out.println("Positive number");
+} else {
+    System.out.println("Negative number");
+}
             </code></pre>
 
-            <h3>Explanation:</h3>
-            <p>public class Main defines a a class named Main</p>
-        </div>
-    </section>
+            <h2>Loops</h2>
+            <ul>
+                <li><strong>For Loop:</strong> Used for known iteration counts.</li>
+                <li><strong>While Loop:</strong> Runs while a condition is true.</li>
+                <li><strong>Do-While Loop:</strong> Ensures at least one execution.</li>
+            </ul>
+        </section>
 
-    <section id = "main-section">
-        <h2 id ="variables">Data types and Variables</h2>
-        <div>
-            <p>Java is statically typed, meaning variables must be declared with a specific type.</p>  
+        <section class="main-section" id="Methods_and_Functions">
+            <h1>Methods and Functions</h1>
+            <p>Java uses methods to encapsulate reusable code blocks.</p>
             <pre><code>
-                int year = 2025;
-                double pi = 3.14159265359;
-                float pi = 3.14;
-                String text = "Java Is Cool";
-                boolean isJavaFun = true;
-                char grade = 'A';
-            </code></pre> 
+public class Calculator {
+    public static int add(int a, int b) {
+        return a + b;
+    }
 
-            <p>We also have Shorts, and Longs as well!</p>
-        </div>
-    </section>
+    public static void main(String[] args) {
+        int sum = add(5, 10);
+        System.out.println("Sum: " + sum);
+    }
+}
+            </code></pre>
+        </section>
 
-    <section id="main-section">
-        <h2 id ="control-flow">Control Flow</h2>
-        <div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur officiis, perspiciatis incidunt repudiandae a minima! Sunt, similique exercitationem sint eligendi deleniti odit doloremque dolorem nobis blanditiis commodi fugit ullam nam?</p>
-        <p>Lorem ipsum dolor  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque harum dolorem expedita vero veniam commodi omnis quae cupiditate quas odit repellat, exercitationem ducimus, corporis, magni quia laborum adipisci id reiciendis.it, amet consectetur adipisicing elit. Neque totam sunt excepturi, consectetur, quia dignissimos dolores voluptate dolorem nulla tenetur quasi ea, debitis adipisci iure iusto illo ex! Debitis, nam.</p>
-        </div>
-    </section>
-
-    <section id ="main-section"></section>
-        <h2 id = "for-loops">For Loops</h2>
-        <div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur officiis, perspiciatis incidunt repudiandae a minima! Sunt,Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, culpa? Dolores eius dolorum quibusdam laboriosam repudiandae tempora, at pariatur illum sapiente ab esse molestias, nostrum debitis! Cum id quisquam molestiae.similique exercitationem sint eligendi deleniti odit doloremque dolorem nobis blanditiis commodi fugit ullam nam?</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque totam sunt Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta alias distinctio quo animi error quos odit, rem, quod voluptatum aut rerum inventore a, hic doloremque iusto eaque dolor atque reiciendis!excepturi, consectetur, quia dignissimos dolores voluptate dolorem nulla tenetur quasi ea, debitis adipisci iure iusto illo ex! Debitis, nam.</p>
-        </div>
-    </section>
-
-    <section id = "main-section reference"></section>
+        <section class="main-section" id="References">
+            <h1>References</h1>
+            <ul>
+                <li><p>ChatGPT.com – Java documentation reference.</p></li>
+                <li><p>FreeCodeCamp.com – Project inspiration.</p></li>
+                <li><p>Oracle Java Docs – Official Java documentation.</p></li>
+                <li><p>StackOverflow – Community discussion.</p></li>
+                <li><p>Java Tutorials – Learning resources.</p></li>
+            </ul>
+        </section>
     </main>
 </body>
 </html>

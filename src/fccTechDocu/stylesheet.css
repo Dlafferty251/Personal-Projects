@@ -1,0 +1,61 @@
+* {
+    background-color: #AC8968;
+}
+/* Make navbar stay on the left */
+#navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #865D36;
+    border-right: 2px solid #93785B;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#navbar header {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#navbar .nav-link {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+}
+
+#navbar .nav-link:hover {
+    background-color: #ddd;
+}
+
+/* Adjust layout for main content */
+#main-doc {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+
+.bottom-border {
+    border-bottom
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    #navbar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        text-align: center;
+    }
+    #main-doc {
+        margin-left: 0;
+    }
+}
