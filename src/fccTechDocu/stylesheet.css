@@ -1,5 +1,29 @@
-* {
-    background-color: #AC8968;
+:root {
+    --clr-1: #3E362E;
+    --clr-2: #865D36;
+    --clr-3: #93785B;
+    --clr-4: #AC8968;
+    --clr-5: #A69080;
+    --clr-gradient: #be9773ce;
+
+}
+
+html {
+    background-color: #3E362E;
+}
+
+#main-doc .main-section h1{
+    border-bottom: 2px solid var(--clr-1);
+    width: 40%;
+}
+
+#main-doc {
+    display: block;
+    background-color: var(--clr-4);
+}
+
+#main-doc p {
+    width: 40%;
 }
 /* Make navbar stay on the left */
 #navbar {
@@ -8,8 +32,8 @@
     top: 0;
     width: 200px;
     height: 100%;
-    background-color: #865D36;
-    border-right: 2px solid #93785B;
+    background-color: var(--clr-4);
+    border-right: 2px solid var(--clr-1);
     padding: 10px;
     overflow-y: auto;
 }
@@ -18,6 +42,7 @@
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 10px;
+
 }
 
 #navbar ul {
@@ -29,11 +54,13 @@
     display: block;
     padding: 8px;
     text-decoration: none;
-    color: black;
+    color: var(--clr-1);
+    background-color: var(--clr-3);
 }
 
+
 #navbar .nav-link:hover {
-    background-color: #ddd;
+    background-color: var(--clr-gradient);
 }
 
 /* Adjust layout for main content */
@@ -42,10 +69,10 @@
     padding: 20px;
 }
 
-
 .bottom-border {
-    border-bottom
+    border-bottom: 1px solid var(--clr-3);
 }
+
 /* Responsive Design */
 @media (max-width: 768px) {
     #navbar {
