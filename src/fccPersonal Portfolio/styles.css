@@ -1,0 +1,122 @@
+:root {
+    --color-dark: #3d3c3e;
+    --color-red: #c4453c;
+    --color-blue: #68959b;
+    --background-light: #f4f7fa;
+    --background-red: #f27558;
+    --text-light: #ffffff;
+    --text-color: #2f35a4;
+    --text-color2: #f2b261;
+    --text-color3:#b591c2;;
+
+}
+
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-light);
+    color: var(--color-dark);
+}
+
+img {
+    width: 100px;
+}
+
+/* Navbar Elements */
+.nav-bar {
+    position: fixed;
+    width: 100vw;
+    height: 60px;
+    top: 0;
+    left: 0;
+    padding: 0 1rem;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-items {
+    margin: 0 1rem;
+    text-decoration: none;
+    color:var(--text-light);
+    cursor: pointer;
+}
+
+#navbar-icon {
+    width: 40px;
+    height: auto;
+    margin-right: auto;
+}
+
+.navbar-items a {
+    color: var(--text-light); /* Use the light text color defined in your variables */
+    text-decoration: none; /* Remove the underline */
+    font-weight: bold; /* Optional: Make the text bold */
+}
+
+.navbar-items a:hover {
+    color: var(--color-blue); /* Optional: Change color on hover */
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+
+/* Welcome Section */
+#welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(
+        135deg, 
+        var(--color-red) 0%, 
+        var(--color-blue) 100%
+    );
+    color: var(--text-light);
+    text-align: center;
+}
+
+#welcome-section h1 {
+    font-size: 4rem;
+    border-bottom: 2px solid var(--text-light);
+    margin-bottom: 1rem;
+}
+
+#welcome-section p {
+    font-size: 2rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Project Section */
+#project-section {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--text-color);
+    
+    color: var(--text-light);
+    padding: 2rem;
+}
+
+/* Contact Info Section */
+
+#profile-section {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-red);
+}
