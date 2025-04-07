@@ -26,7 +26,7 @@ public class main {
         //this will ensure there is no negative angles. 
 
         double angle = Math.abs(hourAngle - minAngle);
-        //gets the difference by comparing the angle to whats left after finding whats left after 360. 
+        //gets the diff2erence by comparing the angle to whats left after finding whats left after 360. 
 
         angle = Math.min(angle, 360 - angle);
 
