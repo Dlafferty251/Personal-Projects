@@ -7,8 +7,7 @@
     --text-light: #ffffff;
     --text-color: #2f35a4;
     --text-color2: #f2b261;
-    --text-color3:#b591c2;;
-
+    --text-color3: #b591c2;
 }
 
 * {
@@ -23,23 +22,28 @@ body {
     color: var(--color-dark);
 }
 
-img {
-    width: 100px;
-}
-
 /* Navbar Elements */
 .nav-bar {
     position: fixed;
-    width: 100vw;
+    width: 100%;
     height: 60px;
     top: 0;
     left: 0;
     padding: 0 1rem;
-    color: var(--text-light);
+    background-color: var(--color-dark); /* Add background to improve contrast */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    z-index: 1000;
+}
+
+#navbar-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+    border: 2px solid var(--text-light);
 }
 
 .navbar-list {
@@ -51,28 +55,20 @@ img {
 
 .navbar-items {
     margin: 0 1rem;
-    text-decoration: none;
-    color:var(--text-light);
     cursor: pointer;
 }
 
-#navbar-icon {
-    width: 40px;
-    height: auto;
-    margin-right: auto;
-}
-
 .navbar-items a {
-    color: var(--text-light); /* Use the light text color defined in your variables */
-    text-decoration: none; /* Remove the underline */
-    font-weight: bold; /* Optional: Make the text bold */
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .navbar-items a:hover {
-    color: var(--color-blue); /* Optional: Change color on hover */
-    text-decoration: underline; /* Optional: Add underline on hover */
+    color: var(--color-blue);
+    text-decoration: underline;
 }
-
 
 /* Welcome Section */
 #welcome-section {
@@ -82,13 +78,10 @@ img {
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(
-        135deg, 
-        var(--color-red) 0%, 
-        var(--color-blue) 100%
-    );
+    background: linear-gradient(135deg, var(--color-red) 0%, var(--color-blue) 100%);
     color: var(--text-light);
     text-align: center;
+    padding: 2rem;
 }
 
 #welcome-section h1 {
@@ -106,17 +99,61 @@ img {
 /* Project Section */
 #project-section {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--text-color);
-    
     color: var(--text-light);
-    padding: 2rem;
+    padding: 4rem 2rem;
+}
+
+.project-tile-group {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.project-tile {
+    max-width: 300px;
+    text-align: center;
+    margin: 20px;
+    width: 100%;
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    background: var(--color-dark);
+    padding: 1rem;
+}
+
+.project-tile:hover {
+    transform: scale(1.05);
 }
 
 /* Contact Info Section */
-
 #profile-section {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--background-red);
+    color: var(--text-light);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.link-list-icon {
+    width: 40px;
+    transition: transform 0.2s ease;
+}
+
+.link-list-icon:hover {
+    transform: scale(1.2);
 }
