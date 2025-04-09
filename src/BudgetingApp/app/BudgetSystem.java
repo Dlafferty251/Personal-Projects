@@ -12,22 +12,20 @@ public class BudgetSystem {
         // This is the main method that starts the Budgeting application
         System.out.println("Welcome to the Budget Buddy!");
 
-        // Get User Income
-        System.out.println(getUserIncome.getIncome(scanner));
+        // Get User Income and make it a variable called incomeResult
+        double incomeResult = Double.parseDouble(getUserIncome.getIncome(scanner));
 
-        // Get User Expenses
-        String expenseResult = getUserExpenses.getExpenses(scanner);
+        // Get User Expenses and make it a variable called expenseReult
+        double expenseResult = Double.parseDouble(getUserExpenses.getExpenses(scanner));
         System.out.println(expenseResult);
 
-        scanner.close();
-
         // Calculate Budget
+        String budgetSummary = getBudget.calculateBudget(incomeResult, expenseResult);
 
-
-
+        System.out.println(budgetSummary);
         // Display Budget 
 
 
-
+        scanner.close();
     }
 }
