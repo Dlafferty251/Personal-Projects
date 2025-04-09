@@ -34,9 +34,7 @@ public class BingoBango {
         int randomNumber = random.nextInt(100); // Generate a random number to check
         boolean found = searchForCalled(bingoCard, randomNumber);
 
-        if (found == true) {
-            System.out.println(" The Number is.... " + randomNumber + " You Have: " + found);
-        }
+        
 
 
         for(int i = 0;i< bingoCard.length; ++i) {
@@ -46,6 +44,12 @@ public class BingoBango {
 
             System.out.println(); //Creates a new line for each row of the bingo card
 
+        }
+        
+        if (found == true) {
+            System.out.println(" The Number is.... " + randomNumber + " You Have: " + found);
+        } else {
+            System.out.println("The Number is..." + randomNumber + "You Have: " + found);
         }
     }
 }
