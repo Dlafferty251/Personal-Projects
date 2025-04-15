@@ -25,19 +25,13 @@ public class getUserExpenses extends BudgetSystem {
             System.out.println("Please enter all other expenses: ");
             String otherExpenses = scanner.nextLine();
 
-            String totalExpenses = "Dining Out: " + diningOut + "\n" +
-                                    "Groceries: " + groceries + "\n" +
-                                    "Rent: " + rent + "\n" + 
-                                    "Car Payment: " + carPayment + "\n"
-                                    + "Other Expenses: " + otherExpenses + "\n";
-
             String totalExpensesMath = "Total Expenses: " + (Double.parseDouble(diningOut) + 
                                         Double.parseDouble(groceries) +
                                         Double.parseDouble(rent) + 
                                         Double.parseDouble(carPayment) + 
                                         Double.parseDouble(otherExpenses)) + "\n";
                                     
-            return totalExpenses + totalExpensesMath;
+            return totalExpensesMath;
             
         } catch (Exception e) {
             return "One or more of your inputs were not valid numbers. Please try again.";
