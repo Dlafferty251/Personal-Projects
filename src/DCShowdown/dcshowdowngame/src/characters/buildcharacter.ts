@@ -1,9 +1,13 @@
 
 //Creates interfaces for the characters and their move sets
+
+type EffectType = "lifesteal" | "stun" | "dodge" | "double-damage" | "heal" | 
+                   "big-heal" | "requires-drink" | "confuse" | "none";
+
 export interface Move {
     name: string;
     damage: number;
-    effect?: string;
+    effect?: EffectType;
 }
 
 export interface Character {

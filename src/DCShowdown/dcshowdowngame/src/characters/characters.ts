@@ -1,6 +1,5 @@
 import { buildCharacter, Character } from "./buildcharacter";
 
-
 export const characters: Character[] = [
     {
         name: "Batman",
