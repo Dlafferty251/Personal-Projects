@@ -7,6 +7,7 @@ import { Game } from './Game'; // Make sure this path is correct!
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Game />
+    console.log("game loaded");
   </React.StrictMode>
 );
 
