@@ -1,7 +1,7 @@
 import { describe, it, expect, vi} from "vitest";
 import promptSync from "prompt-sync";
 import { selectCharacters } from "../dcshowdown";
-import { fight } from "../dcshowdowngame/src/combat/fight";
+import { fight } from "../combat/fight";
 import type { Character } from "../characters/buildcharacter";
 import { characters } from "../../../frontend/logic/characters";
 

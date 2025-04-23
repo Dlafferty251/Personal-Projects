@@ -17,6 +17,14 @@ export interface Character {
     speed: number;
     hp: number;
     moves: Move[];
+    status?: {
+        stunned?: boolean;
+        dodging?: boolean;
+        lifestole?: boolean;
+        dmgDouble?: boolean;
+        confused?: boolean;
+        healing?: boolean;
+    }
 }
 
 export function buildCharacter(data: Character): Character {

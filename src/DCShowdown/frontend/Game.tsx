@@ -1,0 +1,54 @@
+import React, { useState } from "react";
+import { characters } from "../frontend/logic/characters";
+import { fightTurn, FightResult } from "../frontend/logic/fight";
+
+export function Game() {
+    const [char1, setChar1] = useState({...characters[0] });
+    const [char2, setChar2] = useState({...characters[1] });
+
+    const[logs, setLogs] = useState<string[]>([]);
+    const [turn, setTurn] = useState(1);
+
+    const handleMove = (move1: string, move2: string) => {
+        const selectedMove1 = char1.moves.find((m) => m.name === move1)!;
+        const selectedMove2 = char2.moves.find((m) => m.name === move2)!;
+
+        const result = fightTurn(char1, selectedMove1, char2, selectedMove2);
+
+        setChar1(result.updatedChar1);
+        setChar2(result.updatedChar2);
+        setLogs((prevLogs) => [...prevLogs, `\n---Turn ${turn} ---`, ...result.logs]);
+        setTurn(turn + 1);
+
+    };
+
+    return (
+        <div className="p-4 font-mono">
+            <h1 className="text-xl mb-4">⚔️ DC Legends ⚔️</h1>
+        
+
+            <div className="flex gap-10 mb-6">
+                <div>
+                    <h2>{char1.name}</h2>
+                    <p>HP: {char1.hp}</p>
+                    {char1.moves.map((m) => (
+                        <button key={m.name} onClick={() => handleMove(m.name, "Punch")}>
+                            {m.name}
+                        </button>
+                    ))}
+                </div>
+                <div>
+                    <h2>{char2.name}</h2>
+                    <p>HP: {char2.hp}</p>
+                </div>
+            </div>
+
+            <div className="whitespace-pre">
+                <h3>Battle log</h3>
+                {logs.map((log, i) => (
+                    <p ley={i}>{log}</p>
+                ))}
+            </div>
+        </div>
+    );
+}

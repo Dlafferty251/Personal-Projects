@@ -1,4 +1,4 @@
-import { Character, Move } from "../models/types";
+import { Character, Move } from "../../dcshowdowngame/src/characters/buildcharacter";
 
 export function handleEffect(
     attacker: Character,
