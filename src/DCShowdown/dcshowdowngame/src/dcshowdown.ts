@@ -1,7 +1,7 @@
 
 // game.ts
 import { characters } from ".characters/characters";
-import { Character } from "./characters/buildcharacter";
+import { Character } from "../../../dc-showdown-ui/src/characters/buildcharacter";
 import promptSync from "prompt-sync";
 
 export function selectCharacters(): [Character, Character] {

@@ -1,4 +1,4 @@
-import { Character } from "../characters/buildcharacter";
+import { Character } from "../../../../dc-showdown-ui/src/characters/buildcharacter";
 import promptSync from "prompt-sync";
 
 export function fight(char1: Character, char2: Character) {

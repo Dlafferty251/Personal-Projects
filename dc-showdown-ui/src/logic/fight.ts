@@ -1,11 +1,13 @@
 // logic/fight.ts
-import { Character, Move } from "../../dcshowdowngame/src/characters/buildcharacter";
+import { Character, Move } from "../characters/buildcharacter";
 
 export interface FightResult {
   updatedChar1: Character;
   updatedChar2: Character;
   logs: string[];
 }
+
+type TurnTuple = [Character, Move, Character];
 
 export function fightTurn(
   char1: Character,
@@ -19,7 +21,7 @@ export function fightTurn(
   const updatedChar1 = { ...char1 };
   const updatedChar2 = { ...char2 };
 
-  let first, second;
+  let first: TurnTuple, second: TurnTuple;
 
   if (char1.speed >= char2.speed) {
     first = [updatedChar1, move1, updatedChar2];

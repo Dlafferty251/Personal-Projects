@@ -1,4 +1,4 @@
-import { buildCharacter, Character } from "../../dcshowdowngame/src/characters/buildcharacter";
+import { Character } from "../characters/buildcharacter";
 
 export const characters: Character[] = [
     {

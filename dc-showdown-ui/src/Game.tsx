@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { characters } from "../frontend/logic/characters";
-import { fightTurn, FightResult } from "../frontend/logic/fight";
+import { characters } from "./logic/characters";
+import { fightTurn } from "./logic/fight";
+import { Move } from "./characters/buildcharacter";
 
 export function Game() {
     const [char1, setChar1] = useState({...characters[0] });
@@ -10,8 +11,10 @@ export function Game() {
     const [turn, setTurn] = useState(1);
 
     const handleMove = (move1: string, move2: string) => {
-        const selectedMove1 = char1.moves.find((m) => m.name === move1)!;
-        const selectedMove2 = char2.moves.find((m) => m.name === move2)!;
+        const selectedMove1 = char1.moves.find((m) => m.name === move1);
+        if(!selectedMove1) return;
+        const selectedMove2 = char2.moves.find((m) => m.name === move2);
+        if(!selectedMove2) return;
 
         const result = fightTurn(char1, selectedMove1, char2, selectedMove2);
 
@@ -31,7 +34,7 @@ export function Game() {
                 <div>
                     <h2>{char1.name}</h2>
                     <p>HP: {char1.hp}</p>
-                    {char1.moves.map((m) => (
+                    {char1.moves.map((m: Move) => (
                         <button key={m.name} onClick={() => handleMove(m.name, "Punch")}>
                             {m.name}
                         </button>
@@ -46,7 +49,7 @@ export function Game() {
             <div className="whitespace-pre">
                 <h3>Battle log</h3>
                 {logs.map((log, i) => (
-                    <p ley={i}>{log}</p>
+                    <p key={i}>{log}</p>
                 ))}
             </div>
         </div>

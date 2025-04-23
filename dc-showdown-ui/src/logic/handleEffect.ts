@@ -1,4 +1,4 @@
-import { Character, Move } from "../../dcshowdowngame/src/characters/buildcharacter";
+import { Character, Move } from "../characters/buildcharacter";
 
 export function handleEffect(
     attacker: Character,
