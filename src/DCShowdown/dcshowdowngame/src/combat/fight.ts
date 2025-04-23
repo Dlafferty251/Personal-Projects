@@ -1,19 +1,5 @@
-
-// game.ts
-import { characters } from ".characters/characters";
-import { Character } from "../../../dc-showdown-ui/src/characters/buildcharacter";
+import { Character } from "../../../../dc-showdown-ui/src/characters/buildcharacter";
 import promptSync from "prompt-sync";
-
-export function selectCharacters(): [Character, Character] {
-  const shuffled = [...characters].sort(() => 0.5 - Math.random());
-  let [char1, char2] = shuffled;
-
-  if (char1.name === char2.name) {
-    char2 = shuffled.find(c => c.name !== char1.name)!;
-  }
-
-  return [char1, char2];
-}
 
 export function fight(char1: Character, char2: Character) {
   const prompt = promptSync();
@@ -74,17 +60,4 @@ export function fight(char1: Character, char2: Character) {
       break;
     }
   }
-}
-
-export function effects() {
-  
-}
-
-export function startGame() {
-  const [char1, char2] = selectCharacters();
-  console.log("Game started:", char1.name, "vs", char2.name); 
-
-  fight(char1, char2);
-
-
 }
