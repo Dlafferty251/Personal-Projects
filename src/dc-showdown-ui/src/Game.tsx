@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { characters } from "./logic/characters";
 import { fightTurn } from "./logic/fight";
-import { Move } from "./characters/buildcharacter";
 
 export function Game() {
     const [char1, setChar1] = useState({...characters[0] });
