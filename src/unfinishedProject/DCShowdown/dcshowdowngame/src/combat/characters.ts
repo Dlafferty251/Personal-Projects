@@ -1,4 +1,4 @@
-import { buildCharacter, Character } from "../../characters/buildcharacter";
+import { buildCharacter, Character } from "characters/buildcharacter";
 
 export const characters: Character[] = [
     {
